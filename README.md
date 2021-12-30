@@ -1,10 +1,10 @@
-# DigitalOcean Kubernetes Challenge
+# DigitalOcean Kubernetes Challenge 2021
 
 
-## Deploy MongoDB Cluster on Kubernetes
+## Deploy MongoDB Cluster on Kubernetes (NO SQL)
 
 
-## What is Kubernetes?
+## What are Kubernetes?
 Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation.
 
 
