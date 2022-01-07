@@ -1,3 +1,4 @@
+
 # DigitalOcean Kubernetes Challenge 2021
 
 
@@ -28,10 +29,14 @@ Digital ocean makes it easier to create Kubernetes clusters.
 - Click on **Create** button.
 - Wait until the cluster is created.
 
+<img width="1440" alt="Screenshot 2022-01-07 at 10 12 51 PM" src="https://user-images.githubusercontent.com/73380583/148593696-5fa853e4-5f8a-4d75-8c8e-9c483a378f22.png">
+
 ### Step 2: Connect to the cluster
 - In the **Overview** tab, **Getting Started** section will have the required information.
 - Go to second tab **Connecting to kubernetes** and copy the command to configure the cluster certificate/kubeconfig which looks something like `doctl kubernetes cluster kubeconfig`.
 - Run the command in the terminal.
+
+<img width="1440" alt="Screenshot 2021-12-30 at 11 11 42 PM" src="https://user-images.githubusercontent.com/73380583/148593976-24285847-af68-470f-9b7a-5a87cded5be6.png">
 
 ### Step 3: Deploy MongoDB Cluster
 - Clone this [MongoDB Kubernetes Challenge Repo](https://github.com/csfx-py/DOproject) using `git clone https://github.com/csfx-py/DOproject.git`.
@@ -44,11 +49,17 @@ Digital ocean makes it easier to create Kubernetes clusters.
 - Wait until the deployment is complete.
 - Run `kubectl get all` to check the status of the deployment.
 
+<img width="1440" alt="Screenshot 2021-12-30 at 11 10 01 PM" src="https://user-images.githubusercontent.com/73380583/148594160-b621c218-166c-424f-8c9d-157cf5a71bcb.png">
+
+
 ### Step 4: Verify the deployment
 - Run `kubectl exec deployment/mongo-client -it -- /bin/bash` to connect to the MongoDB cluster.
 - The prompt should change to *root@mongo-client-xxx*
     - Run `mongo --host mongo-nodeport-svc --port 27017 -u <username> -p <password>` where *username* and *password* are the values you entered in **mongodb-secrets.yaml** file.
     - You should see the mongoDB info and prompt for mongo commands.
+
+<img width="1440" alt="Screenshot 2021-12-30 at 11 10 04 PM" src="https://user-images.githubusercontent.com/73380583/148593794-cb6b2ef2-9647-4ee8-9d55-cc89435ea616.png">
+
 
 ### Step 5: Its over , Completed
 Congratulations! You have successfully deployed a MongoDB cluster on Kubernetes.
